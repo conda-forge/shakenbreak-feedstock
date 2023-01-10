@@ -1,13 +1,13 @@
 {% set name = "shakenbreak" %}
-{% set version = "22.12.2" %}
+{% set version = "23.1.7" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 4fd8e3c0429382310f09a05422fc8be46b3ba4a470a9805feed7c6498539e6f4
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b407d0abfb07371feca1442eea4f17469e07cee6e9b5ba81029a3c823da1f4a6
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ build:
     - shakenbreak-plot = shakenbreak.cli:plot
     - shakenbreak-regenerate = shakenbreak.cli:regenerate
     - shakenbreak-groundstate = shakenbreak.cli:groundstate
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -76,13 +76,13 @@ test:
     - shakenbreak-groundstate --help
 
 about:
-  home: "https://github.com/SMTG-UCL/ShakeNBreak"
+  home: https://github.com/SMTG-UCL/ShakeNBreak
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Package to generate and analyse distorted defect structures, in order to identify ground-state and metastable defect configurations."
-  doc_url: "https://shakenbreak.readthedocs.io/en/latest/"
-  dev_url: "https://github.com/SMTG-UCL/ShakeNBreak"
+  summary: Package to generate and analyse distorted defect structures, in order to identify ground-state and metastable defect configurations.
+  doc_url: https://shakenbreak.readthedocs.io/en/latest/
+  dev_url: https://github.com/SMTG-UCL/ShakeNBreak
 
 extra:
   recipe-maintainers:
