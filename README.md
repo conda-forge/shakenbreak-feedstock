@@ -1,11 +1,11 @@
-About shakenbreak
-=================
+About shakenbreak-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/shakenbreak-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/SMTG-UCL/ShakeNBreak
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/shakenbreak-feedstock/blob/main/LICENSE.txt)
 
 Summary: Package to generate and analyse distorted defect structures, in order to identify ground-state and metastable defect configurations.
 
