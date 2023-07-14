@@ -1,5 +1,5 @@
 {% set name = "shakenbreak" %}
-{% set version = "23.6.3" %}
+{% set version = "23.6.23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 65ac5fe6dfba5fc8e64773535ba603672720f31bdbc089310f7c9c2e47fef5f8
+  sha256: afc7d6d0077162a9c75fcde41d441a890d99b4d5c0866eca4eeadddd07d3675b
 
 build:
   noarch: python
-  number: 5
+  number: 0
   entry_points:
     - snb = shakenbreak.cli:snb
     - snb-generate = shakenbreak.cli:generate
@@ -22,6 +22,7 @@ build:
     - snb-plot = shakenbreak.cli:plot
     - snb-regenerate = shakenbreak.cli:regenerate
     - snb-groundstate = shakenbreak.cli:groundstate
+    - snb-mag = shakenbreak.cli:mag
     - shakenbreak = shakenbreak.cli:snb
     - shakenbreak-generate = shakenbreak.cli:generate
     - shakenbreak-generate_all = shakenbreak.cli:generate_all
@@ -31,6 +32,7 @@ build:
     - shakenbreak-plot = shakenbreak.cli:plot
     - shakenbreak-regenerate = shakenbreak.cli:regenerate
     - shakenbreak-groundstate = shakenbreak.cli:groundstate
+    - shakenbreak-mag = shakenbreak.cli:mag
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -50,9 +52,6 @@ requirements:
     - pymatgen-analysis-defects >=2022.10.28
     - python >=3.8,<3.11
     - seaborn
-    
-  pip:
-    - mp-pyrho
 
 test:
   imports:
@@ -68,6 +67,7 @@ test:
     - snb-plot --help
     - snb-regenerate --help
     - snb-groundstate --help
+    - snb-mag --help
     - shakenbreak --help
     - shakenbreak-generate --help
     - shakenbreak-generate_all --help
@@ -77,6 +77,7 @@ test:
     - shakenbreak-plot --help
     - shakenbreak-regenerate --help
     - shakenbreak-groundstate --help
+    - shakenbreak-mag --help
 
 about:
   home: https://github.com/SMTG-UCL/ShakeNBreak
