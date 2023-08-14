@@ -49,7 +49,7 @@ requirements:
     - numpy
     - pandas >=1.1.0
     - pymatgen >=2022.10.22
-    - pymatgen-analysis-defects >=2022.10.28
+    - pymatgen-analysis-defects >=2023.07.24  # issue with missing mp-pyrho in previous versions
     - python >=3.8
     - seaborn
 
