@@ -42,7 +42,7 @@ requirements:
   run:
     - ase
     - click >8.0
-    - hiphive>=1.0
+    - hiphive >=1.0
     - importlib_metadata
     - matplotlib-base
     - monty
