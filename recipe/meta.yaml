@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   entry_points:
     - snb = shakenbreak.cli:snb
     - snb-generate = shakenbreak.cli:generate
