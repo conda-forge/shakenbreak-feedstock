@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 3
+  number: 0
   entry_points:
     - snb = shakenbreak.cli:snb
     - snb-generate = shakenbreak.cli:generate
@@ -49,8 +49,7 @@ requirements:
     - numpy
     - pandas >=1.1.0
     - pymatgen >=2023.5.8  # set by pymatgen-analysis-defects
-    - pymatgen-analysis-defects >=2023.07.24  # issue with missing mp-pyrho in previous versions
-    - mp-pyrho >=0.3.0  # not used but currently listed as a requirement on pymatgen-analysis-defects conda feedstock, should be fixed by next version update
+    - pymatgen-analysis-defects >=2023.07.31  # issue with missing mp-pyrho in previous versions
     - python >=3.8
     - seaborn
 
