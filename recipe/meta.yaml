@@ -50,8 +50,9 @@ requirements:
     - pandas >=1.1.0
     - pymatgen >=2023.5.8  # set by pymatgen-analysis-defects
     - pymatgen-analysis-defects >=2023.07.31  # issue with missing mp-pyrho in previous versions
+    - python >=3.8
     - seaborn
-    - doped >= 2.0.1
+    - doped >=2.0.1
 
 test:
   imports:
