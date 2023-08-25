@@ -1,5 +1,5 @@
 {% set name = "shakenbreak" %}
-{% set version = "3.1.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cc5298b877a897d89a950b0a74468b84c31ef6f750697886edbd27f27fc2d1f9
+  sha256: 178b4d2b32a92222ba9c8ab3065fbfdfbb988c9b956348b2daa63359baf9fce8
 
 build:
   noarch: python
@@ -50,8 +50,8 @@ requirements:
     - pandas >=1.1.0
     - pymatgen >=2023.5.8  # set by pymatgen-analysis-defects
     - pymatgen-analysis-defects >=2023.07.31  # issue with missing mp-pyrho in previous versions
-    - python >=3.8
     - seaborn
+    - doped >= 2.0.1
 
 test:
   imports:
