@@ -1,5 +1,5 @@
 {% set name = "shakenbreak" %}
-{% set version = "3.2.0" %}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 178b4d2b32a92222ba9c8ab3065fbfdfbb988c9b956348b2daa63359baf9fce8
+  sha256: 2c9b973366ff7ffbe2acd2aec1c40ff53fc72830d1aa81b130d8274cca4b4d64
 
 build:
   noarch: python
@@ -52,12 +52,12 @@ requirements:
     - pymatgen-analysis-defects >=2023.07.31  # issue with missing mp-pyrho in previous versions
     - python >=3.8
     - seaborn
-    - doped >=2.0.1
+    - doped >=2.0.3
 
 test:
   imports:
     - shakenbreak
-    - tests
+
   commands:
     - snb --help
     - snb-generate --help
