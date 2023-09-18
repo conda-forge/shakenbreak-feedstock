@@ -44,7 +44,7 @@ requirements:
     - click >8.0
     - hiphive >=1.0
     - importlib_metadata
-    - matplotlib >=3.6
+    - matplotlib-base >=3.6
     - monty
     - numpy
     - pandas >=1.1.0
