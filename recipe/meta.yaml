@@ -1,5 +1,5 @@
 {% set name = "shakenbreak" %}
-{% set version = "3.2.2" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6b5bed2bec47afc75968b0f14527b69183ad4d71247112eca0e391052dd304fd
+  sha256: db5967685c71d82e40576035dc3b641056d076348fb63201866c5c879ddc4cfe
 
 build:
   noarch: python
@@ -52,7 +52,7 @@ requirements:
     - pymatgen-analysis-defects >=2023.07.31  # issue with missing mp-pyrho in previous versions
     - python >=3.8
     - seaborn
-    - doped >=2.0.3
+    - doped >=2.3.0
 
 test:
   imports:
