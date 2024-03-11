@@ -81,13 +81,13 @@ test:
     - shakenbreak-mag --help
 
 about:
-  home: https://github.com/SMTG-UCL/ShakeNBreak
+  home: https://github.com/SMTG-Bham/ShakeNBreak
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Package to generate and analyse distorted defect structures, in order to identify ground-state and metastable defect configurations.
   doc_url: https://shakenbreak.readthedocs.io/en/latest/
-  dev_url: https://github.com/SMTG-UCL/ShakeNBreak
+  dev_url: https://github.com/SMTG-Bham/ShakeNBreak
 
 extra:
   recipe-maintainers:
