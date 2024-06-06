@@ -52,7 +52,7 @@ requirements:
     - pymatgen-analysis-defects >=2023.07.31  # issue with missing mp-pyrho in previous versions
     - python >=3.8
     - seaborn
-    - doped >=2.4.3  # update to 2.4.4 on next update (can't now because won't doped 2.4.4 not yet released to conda)
+    - doped >=2.4.4
 
 test:
   imports:
