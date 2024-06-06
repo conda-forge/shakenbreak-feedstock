@@ -1,5 +1,5 @@
 {% set name = "shakenbreak" %}
-{% set version = "3.3.4" %}
+{% set version = "3.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8d6988bbf931bd7b9525e0d9d3cf20aa7d625a442c839dd89d3083db8dad017c
+  sha256: cfb6365ce066c762ff2633ccfe207a1d6d87c9ac319af757e49e0dbc59199040
 
 build:
   noarch: python
@@ -54,7 +54,7 @@ requirements:
     - seaborn
     - doped >=2.4.4
 
-test:
+test:  # needs to be commented out if ever any co-dependent doped/ShakeNBreak releases
   imports:
     - shakenbreak
 
