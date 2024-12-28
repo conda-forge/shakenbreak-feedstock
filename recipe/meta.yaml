@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 99e861b0db2c19da243e5555814ac64868c2c57a5ac6f28df46f0dba4432f27a
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - snb = shakenbreak.cli:snb
     - snb-generate = shakenbreak.cli:generate
@@ -38,7 +38,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
     - ase
@@ -51,11 +51,13 @@ requirements:
     - pandas >=1.1.0
     - pymatgen >=2023.5.8  # set by pymatgen-analysis-defects
     - pymatgen-analysis-defects >=2023.07.31  # issue with missing mp-pyrho in previous versions
-    - python >=3.8
+    - python >={{ python_min }}
     - seaborn
     - doped >=2.4.4
 
 test:  # needs to be commented out if ever any co-dependent doped/ShakeNBreak releases
+  requires:
+    - python {{ python_min }}
   imports:
     - shakenbreak
 
