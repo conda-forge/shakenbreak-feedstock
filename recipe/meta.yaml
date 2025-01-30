@@ -49,7 +49,7 @@ requirements:
     - numpy
     - click >8.0
     - hiphive >=1.0
-    - importlib_metadata
+    - importlib-metadata
     - matplotlib-base >=3.6
     - pandas >=1.1.0    
     - seaborn
