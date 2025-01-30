@@ -1,5 +1,5 @@
 {% set name = "shakenbreak" %}
-{% set version = "3.3.6" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 99e861b0db2c19da243e5555814ac64868c2c57a5ac6f28df46f0dba4432f27a
+  sha256: 913d66342b64c43870a33225b5c0e94d65be79efd30f68b10de298301c0ba6d7
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - snb = shakenbreak.cli:snb
     - snb-generate = shakenbreak.cli:generate
@@ -41,19 +41,18 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
+    - python >={{ python_min }}
+    - doped >=3.0.0  # `_scan_sm_stol_till_match` required
+    - pymatgen  # requirement set by doped
+    - pymatgen-analysis-defects  # requirement set by doped
     - ase
+    - numpy
     - click >8.0
     - hiphive >=1.0
-    - importlib_metadata
+    - importlib-metadata
     - matplotlib-base >=3.6
-    - monty
-    - numpy
-    - pandas >=1.1.0
-    - pymatgen >=2023.5.8  # set by pymatgen-analysis-defects
-    - pymatgen-analysis-defects >=2023.07.31  # issue with missing mp-pyrho in previous versions
-    - python >={{ python_min }}
+    - pandas >=1.1.0    
     - seaborn
-    - doped >=2.4.4
 
 test:  # needs to be commented out if ever any co-dependent doped/ShakeNBreak releases
   requires:
