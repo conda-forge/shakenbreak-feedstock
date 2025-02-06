@@ -1,5 +1,5 @@
 {% set name = "shakenbreak" %}
-{% set version = "3.4.0" %}
+{% set version = "3.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 913d66342b64c43870a33225b5c0e94d65be79efd30f68b10de298301c0ba6d7
+  sha256: 20cdfbdc3a9ea68b710e7e80709f0d24663c89271ade0137a9b9701620b85d70
 
 build:
   noarch: python
