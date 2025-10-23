@@ -55,33 +55,33 @@ requirements:
     - pandas >=1.1.0
     - seaborn
 
-# test:  # needs to be commented out if ever any co-dependent doped/ShakeNBreak releases
-#   requires:
-#     - python {{ python_min }}
-#   imports:
-#     - shakenbreak
+test:  # needs to be commented out if ever any co-dependent doped/ShakeNBreak releases
+  requires:
+    - python {{ python_min }}
+  imports:
+    - shakenbreak
 
-#   commands:
-#     - snb --help
-#     - snb-generate --help
-#     - snb-generate_all --help
-#     - snb-run --help
-#     - snb-parse --help
-#     - snb-analyse --help
-#     - snb-plot --help
-#     - snb-regenerate --help
-#     - snb-groundstate --help
-#     - snb-mag --help
-#     - shakenbreak --help
-#     - shakenbreak-generate --help
-#     - shakenbreak-generate_all --help
-#     - shakenbreak-run --help
-#     - shakenbreak-parse --help
-#     - shakenbreak-analyse --help
-#     - shakenbreak-plot --help
-#     - shakenbreak-regenerate --help
-#     - shakenbreak-groundstate --help
-#     - shakenbreak-mag --help
+  commands:
+    - snb --help
+    - snb-generate --help
+    - snb-generate_all --help
+    - snb-run --help
+    - snb-parse --help
+    - snb-analyse --help
+    - snb-plot --help
+    - snb-regenerate --help
+    - snb-groundstate --help
+    - snb-mag --help
+    - shakenbreak --help
+    - shakenbreak-generate --help
+    - shakenbreak-generate_all --help
+    - shakenbreak-run --help
+    - shakenbreak-parse --help
+    - shakenbreak-analyse --help
+    - shakenbreak-plot --help
+    - shakenbreak-regenerate --help
+    - shakenbreak-groundstate --help
+    - shakenbreak-mag --help
 
 about:
   home: https://github.com/SMTG-Bham/ShakeNBreak
