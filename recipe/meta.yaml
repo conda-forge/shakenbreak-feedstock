@@ -1,18 +1,17 @@
 {% set name = "shakenbreak" %}
-{% set version = "3.4.2" %}
+{% set version = "3.4.3" %}
 
-# Notes: Change build number back to 0 on next release, and put the tests back in (removed due to previous issue with unguarded `vise` import)
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 84551fbc6ba9b06ee7381898ead5596d6b553fce2addd3951669384b5bfc2b4c
+  sha256: 812c0e20ef98b74610740a12ed6e05eee723689ea0f1c40a248a477198e97296
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - snb = shakenbreak.cli:snb
     - snb-generate = shakenbreak.cli:generate
@@ -52,36 +51,36 @@ requirements:
     - hiphive >=1.0
     - importlib-metadata
     - matplotlib-base >=3.6
-    - pandas >=1.1.0    
+    - pandas >=1.1.0
     - seaborn
 
-# test:  # needs to be commented out if ever any co-dependent doped/ShakeNBreak releases
-#   requires:
-#     - python {{ python_min }}
-#   imports:
-#     - shakenbreak
+test:  # needs to be commented out if ever any co-dependent doped/ShakeNBreak releases
+  requires:
+    - python {{ python_min }}
+  imports:
+    - shakenbreak
 
-#   commands:
-#     - snb --help
-#     - snb-generate --help
-#     - snb-generate_all --help
-#     - snb-run --help
-#     - snb-parse --help
-#     - snb-analyse --help
-#     - snb-plot --help
-#     - snb-regenerate --help
-#     - snb-groundstate --help
-#     - snb-mag --help
-#     - shakenbreak --help
-#     - shakenbreak-generate --help
-#     - shakenbreak-generate_all --help
-#     - shakenbreak-run --help
-#     - shakenbreak-parse --help
-#     - shakenbreak-analyse --help
-#     - shakenbreak-plot --help
-#     - shakenbreak-regenerate --help
-#     - shakenbreak-groundstate --help
-#     - shakenbreak-mag --help
+  commands:
+    - snb --help
+    - snb-generate --help
+    - snb-generate_all --help
+    - snb-run --help
+    - snb-parse --help
+    - snb-analyse --help
+    - snb-plot --help
+    - snb-regenerate --help
+    - snb-groundstate --help
+    - snb-mag --help
+    - shakenbreak --help
+    - shakenbreak-generate --help
+    - shakenbreak-generate_all --help
+    - shakenbreak-run --help
+    - shakenbreak-parse --help
+    - shakenbreak-analyse --help
+    - shakenbreak-plot --help
+    - shakenbreak-regenerate --help
+    - shakenbreak-groundstate --help
+    - shakenbreak-mag --help
 
 about:
   home: https://github.com/SMTG-Bham/ShakeNBreak
