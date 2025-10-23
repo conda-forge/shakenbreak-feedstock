@@ -1,7 +1,6 @@
 {% set name = "shakenbreak" %}
 {% set version = "3.4.3" %}
 
-# Notes: Change build number back to 0 on next release, and put the tests back in (removed due to previous issue with unguarded `vise` import)
 package:
   name: {{ name|lower }}
   version: {{ version }}
