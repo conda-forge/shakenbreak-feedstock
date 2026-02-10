@@ -1,5 +1,5 @@
 {% set name = "shakenbreak" %}
-{% set version = "3.4.3" %}
+{% set version = "3.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 812c0e20ef98b74610740a12ed6e05eee723689ea0f1c40a248a477198e97296
+  sha256: 4dce1352660cf067e7c2ce8de5c50c210ce875d5075cdaf880a8c129ef583e21
 
 build:
   noarch: python
@@ -42,7 +42,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - doped >=3.1.0  # `StructureMatcher_scan_stol` required
+    - doped >=3.2.1  # `StructureMatcher_scan_stol` required
     - pymatgen  # requirement set by doped
     - pymatgen-analysis-defects  # requirement set by doped
     - ase
