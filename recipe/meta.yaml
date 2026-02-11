@@ -1,8 +1,9 @@
+{% set name = "shakenbreak" %}
 {% set pypi_version = "3.4.4" %}
 {% set epoch = "1!" %}  # epoch 1 to try avoid issues with version scheme changes
 
 package:
-  name: shakenbreak
+  name: {{ name|lower }}
   version: "{{ epoch }}{{ pypi_version }}"
 
 source:
